@@ -5,6 +5,7 @@ This project involves the ability to discern the location of an image using mach
 The motivation of this project is being able to geotag images without any additional information other than the pixels in the image. The ability to do this could have widespread uses, from tagging photos on social media sites, to cheating in the popular game Geoguessr. 
 # Algorithms and Methods
 For the proposed dataset, google street api will be used to generate random street images across the 10 selected countries. Around 35000 images will be generated to ensure the proposed model will have enough data to hypertune parameters and ensure accuracy with the validation set in subsequent trials. The dataset will be the input for a convolutional neural network implemented through PyTorch libraries/packages. We will normalize the data and then pass it through a CNN with convolutional, ReLU, max pooling, and fully connected layers. Finally, we will use a cross entropy loss function and optimize with gradient descent.
+
 ![general CNN architecture](https://i0.wp.com/developersbreach.com/wp-content/uploads/2020/08/cnn_banner.png?fit=1200%2C564&ssl=1)
 *Similar CNN Architecture*   [source](https://developersbreach.com/convolution-neural-network-deep-learning/)
 # Discussion and Expected Results
