@@ -1,4 +1,5 @@
 # geoguess-ml
+![image](https://github.gatech.edu/storage/user/60157/files/a4fe5357-46df-4f2b-8462-99021752c736)
 # Intro
 This project involves the ability to discern the location of an image using machine learning. There has been a decent amount of work done in this field. In 2016, Google developed an AI called Planet which aimed to recognize the location of a photo anywhere in the world. At the University of Colorado Boulder, students aimed to create an AI which could determine the location of a photo in the continental U.S states(Theethira). However, this area of ML is far from being perfected. The Google Planet AI could only detect location with a country-accuracy of 28%(Brokaw). 
 # Motivation
