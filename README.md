@@ -14,9 +14,9 @@ There will be a few constraints put on our results. We will not consider the exa
 In order to quantify the overall accuracy of our model, we will use an accuracy score function which computes what percentage of predictions are correct. As a measure of how well our model matches our hypothesis, we will compare the accuracy of our algorithm and the accuracy of a human participant in geotagging a set of images. Our algorithm will be successful if it produces correct guesses at a rate greater than or equal to a participant.
 # References
  Brokaw, Alex. “Google's Latest AI Doesn't Need Geotags to Figure out a Photo's Location.” The Verge, The Verge, 25 Feb. 2016, https://www.theverge.com/2016/2/25/11112594/google-new-deep-learning-image-location-planet. 
-Theethira, Nirvan S. “GEOGUESSR AI: IMAGE BASED GEO-LOCATION.” GEOGUESSR AI, Mar. 2020, https://nirvan66.github.io/geoguessr.html. 
 Nguyen, Q. C., Huang, Y., Kumar, A., Duan, H., Keralis, J. M., Dwivedi, P., Meng, H.-W., Brunisholz, K. D., Jay, J., Javanmardi, M., &amp; Tasdizen, T. (2020, September 1). Using 164 million google street view images to derive built environment predictors of COVID-19 cases. MDPI. Retrieved October 7, 2022, from https://www.mdpi.com/1660-4601/17/17/6359  
  I. Mrázová, J. Pihera and J. Velemínská, "Can N-dimensional convolutional neural networks distinguish men and women better than humans do?," The 2013 International Joint Conference on Neural Networks (IJCNN), 2013, pp. 1-8, doi: 10.1109/IJCNN.2013.6707101.  
 Swapna. “Convolutional Neural Network: Deep Learning.” Developers Breach, 25 Jan. 2022, https://developersbreach.com/convolution-neural-network-deep-learning/#1-1-
   convolution.  
+  Theethira, Nirvan S. “GEOGUESSR AI: IMAGE BASED GEO-LOCATION.” GEOGUESSR AI, Mar. 2020, https://nirvan66.github.io/geoguessr.html. 
  
