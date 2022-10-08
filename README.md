@@ -1,6 +1,6 @@
 # geoguess-ml
 # Intro
-This project involves the ability to discern the location of an image using machine learning. There has been a decent amount of work done in this field. In 2016, Google developed an AI called Planet which aimed to recognize the location of a photo anywhere in the world. At the University of Colorado Boulder, researchers aimed to create an AI which could determine the location of a photo in the continental U.S states. However, this area of ML is far from being perfected. The Google Planet AI could only detect location with a country-accuracy of 28%. 
+This project involves the ability to discern the location of an image using machine learning. There has been a decent amount of work done in this field. In 2016, Google developed an AI called Planet which aimed to recognize the location of a photo anywhere in the world. At the University of Colorado Boulder, students aimed to create an AI which could determine the location of a photo in the continental U.S states(Theethira). However, this area of ML is far from being perfected. The Google Planet AI could only detect location with a country-accuracy of 28%(Brokaw). 
 # Motivation
 The motivation of this project is being able to geotag images without any additional information other than the pixels in the image. The ability to do this could have widespread uses, from tagging photos on social media sites to identifying the location of criminals or fugitives using only a small set of images. 
 # Algorithms and Methods
@@ -16,4 +16,5 @@ Nguyen, Q. C., Huang, Y., Kumar, A., Duan, H., Keralis, J. M., Dwivedi, P., Meng
 Swapna. “Convolutional Neural Network: Deep Learning.” Developers Breach, 25 Jan. 2022, https://developersbreach.com/convolution-neural-network-deep-learning/#1-1-
   convolution.  
   I. Mrázová, J. Pihera and J. Velemínská, "Can N-dimensional convolutional neural networks distinguish men and women better than humans do?," The 2013 International Joint Conference on Neural Networks (IJCNN), 2013, pp. 1-8, doi: 10.1109/IJCNN.2013.6707101.  
-  
+  Brokaw, Alex. “Google's Latest AI Doesn't Need Geotags to Figure out a Photo's Location.” The Verge, The Verge, 25 Feb. 2016, https://www.theverge.com/2016/2/25/11112594/google-new-deep-learning-image-location-planet. 
+Theethira, Nirvan S. “GEOGUESSR AI: IMAGE BASED GEO-LOCATION.” GEOGUESSR AI, Mar. 2020, https://nirvan66.github.io/geoguessr.html. 
