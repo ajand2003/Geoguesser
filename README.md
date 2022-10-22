@@ -20,4 +20,6 @@ Swapna. “Convolutional Neural Network: Deep Learning.” Developers Breach, 25
   convolution.  
 4. Popa, Bogdan. “Music Video Created with Google Maps Street View Images Is Surprisingly Cool.” Autoevolution, 16 May 2020, https://www.autoevolution.com/news/music-video-created-with-google-maps-street-view-images-is-surprisingly-cool-143752.html#agal_0. 
 5. Theethira, Nirvan S. “GEOGUESSR AI: IMAGE BASED GEO-LOCATION.” GEOGUESSR AI, Mar. 2020, https://nirvan66.github.io/geoguessr.html. 
- 
+# Gantt Chart
+
+[GanttChart.xlsx](https://github.gatech.edu/dgorin6/geoguess-ml/files/1193/GanttChart.xlsx)
