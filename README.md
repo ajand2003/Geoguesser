@@ -26,7 +26,7 @@ There will be a few constraints put on our results. We will not consider the exa
 In order to quantify the overall accuracy of our model, we will use an accuracy score function which computes what percentage of predictions are correct. As a measure of how well our model matches our hypothesis, we will compare the accuracy of our algorithm and the accuracy of a human participant in geotagging a set of images. Our algorithm will be successful if it produces correct guesses at a rate greater than or a participant.
 
 # Results and Discussion
-Before training the model, we performed feature reduction by applying PCA to keep the 20 most pervelant features for each image. After running PCA, we trained the model over 10 epochs and received a training accuracy of 96% for the final epoch.
+Before training the model, we performed feature reduction by applying PCA to keep the 20 most prevalent features for each image. After running PCA, we trained the model over 10 epochs and received a training accuracy of 96% for the final epoch.
 
 ![Epoch Training Data](Training_Accuracy.png)
 
