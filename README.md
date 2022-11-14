@@ -24,5 +24,5 @@ For dimensionality reduction, we used the PCA algorithm from the scikit-learn mo
 # Discussion and Expected Results
 There will be a few constraints put on our results. We will not consider the exact location of the image. Instead, we will consider if the correct country was chosen. In other predictive uses of convolutional neural networks, well-developed CNNs have been able to outperform humans by around 33 percent (Mrázová et al). Accounting for the unique characteristics of our project in addition to knowledge/time constraints, we hypothesize that our algorithm will provide correct predictions at a rate slightly greater than an educated human.
 In order to quantify the overall accuracy of our model, we will use an accuracy score function which computes what percentage of predictions are correct. As a measure of how well our model matches our hypothesis, we will compare the accuracy of our algorithm and the accuracy of a human participant in geotagging a set of images. Our algorithm will be successful if it produces correct guesses at a rate greater than or a participant.
-# Gantt Chart
+# Gantt Chart (Contribution Table Included)
 [GanttChart (4).xlsx](https://github.gatech.edu/dgorin6/geoguess-ml/files/1207/GanttChart.4.xlsx)
