@@ -32,13 +32,13 @@ Before training the model, we performed feature reduction by applying PCA to kee
 
 Once the model was trained, we tested the model with a total of 500 images and received a testing accuracy of 28%.
 
-*Testing accuracy*
+![Country Labels](Labels.png)
+![ML Metrics](Analysis.png)
 
 We also analyzed the predictive performance of each feature by calculating the percision, recall, and F1 for each label and received the following metrics:
 
 
-Our metrics indicate a high predictive performance for Japan, South Africa, and Portugal while a low predictive performance for Australia, United States, and Russia. These results are expected, as Japan, South Africa, and Portugal are smaller countries which led to more similar images being collected. On the other hand, Australia, United States, and Russia are larger countries leading to less similar images being collected. The difference between the similarity of the images collected affect the model's accuracy for predicting each individual label. 
+Our metrics indicate a high predictive performance for Japan, South Africa, and Portugal while a low predictive performance for Australia, United States, and Russia. These results are expected, as Japan, South Africa, and Portugal are smaller countries which led to more similar images being collected. On the other hand, Australia, United States, and Russia are larger countries leading to less similar images being collected. The difference between the similarity of the images collected affect the model's accuracy for predicting each individual label. Our model also indicates overfitting, which we will attempt to improve on by tuning our hyperparameters for the CNN.
 
-# Gantt Chart (Contribution Table Included)
-[GanttChart.4.xlsx](https://github.gatech.edu/dgorin6/geoguess-ml/files/1208/GanttChart.4.xlsx)
-
+# Gantt Chart
+[GanttChart.xlsx](https://github.gatech.edu/dgorin6/geoguess-ml/files/1193/GanttChart.xlsx)
