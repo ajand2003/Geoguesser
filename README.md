@@ -24,5 +24,20 @@ For dimensionality reduction, we used the PCA algorithm from the scikit-learn mo
 # Discussion and Expected Results
 There will be a few constraints put on our results. We will not consider the exact location of the image. Instead, we will consider if the correct country was chosen. In other predictive uses of convolutional neural networks, well-developed CNNs have been able to outperform humans by around 33 percent (Mrázová et al). Accounting for the unique characteristics of our project in addition to knowledge/time constraints, we hypothesize that our algorithm will provide correct predictions at a rate slightly greater than an educated human.
 In order to quantify the overall accuracy of our model, we will use an accuracy score function which computes what percentage of predictions are correct. As a measure of how well our model matches our hypothesis, we will compare the accuracy of our algorithm and the accuracy of a human participant in geotagging a set of images. Our algorithm will be successful if it produces correct guesses at a rate greater than or a participant.
-# Gantt Chart (Contribution Table Included)
-[GanttChart (4).xlsx](https://github.gatech.edu/dgorin6/geoguess-ml/files/1207/GanttChart.4.xlsx)
+
+# Results and Discussion
+Before training the model, we performed feature reduction by applying PCA to keep the 20 most pervelant features for each image. After running PCA, we trained the model over 10 epochs and received a training accuracy of 96% for the final epoch.
+
+*Epoch Training Data*
+
+Once the model was trained, we tested the model with a total of 500 images and received a testing accuracy of 28%.
+
+*Testing accuracy*
+
+We also analyzed the predictive performance of each feature by calculating the percision, recall, and F1 for each label and received the following metrics:
+
+
+Our metrics indicate a high predictive performance for Japan, South Africa, and Portugal while a low predictive performance for Australia, United States, and Russia. These results are expected, as Japan, South Africa, and Portugal are smaller countries which led to more similar images being collected. On the other hand, Australia, United States, and Russia are larger countries leading to less similar images being collected. The difference between the similarity of the images collected affect the model's accuracy for predicting each individual label. 
+
+# Gantt Chart
+[GanttChart.xlsx](https://github.gatech.edu/dgorin6/geoguess-ml/files/1193/GanttChart.xlsx)
