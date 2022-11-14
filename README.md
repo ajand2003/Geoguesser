@@ -32,7 +32,8 @@ Before training the model, we performed feature reduction by applying PCA to kee
 
 Once the model was trained, we tested the model with a total of 500 images and received a testing accuracy of 28%.
 
-*Testing accuracy*
+![Country Labels](Labels.png)
+![ML Metrics](Analysis.png)
 
 We also analyzed the predictive performance of each feature by calculating the percision, recall, and F1 for each label and received the following metrics:
 
