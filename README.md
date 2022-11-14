@@ -28,7 +28,7 @@ In order to quantify the overall accuracy of our model, we will use an accuracy 
 # Results and Discussion
 Before training the model, we performed feature reduction by applying PCA to keep the 20 most pervelant features for each image. After running PCA, we trained the model over 10 epochs and received a training accuracy of 96% for the final epoch.
 
-*Epoch Training Data*
+![Epoch Training Data](Training_Accuracy.png)
 
 Once the model was trained, we tested the model with a total of 500 images and received a testing accuracy of 28%.
 
