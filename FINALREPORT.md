@@ -26,9 +26,12 @@ For dimensionality reduction, we used the PCA algorithm from the scikit-learn mo
 ![general CNN architecture](https://i0.wp.com/developersbreach.com/wp-content/uploads/2020/08/cnn_banner.png?fit=1200%2C564&ssl=1)
 *Similar CNN Architecture*   [source](https://developersbreach.com/convolution-neural-network-deep-learning/)
 
+## Modified Model
+We modified our neural network to examine how adding an additional layer would affect the performance of our neural network. We first modified the number of in and out connections of our neural network, and then added a convolutional, batch normalization, and ReLU layer. We wanted to examine if the addition of this layer would improve classification or cause overfitting.
+
 # Results and Discussion
 ## Initial Model
-Before training the model, we performed feature reduction by applying PCA to keep the 20 most prevalent features for each image. By running PCA in this manner, we were able to maintain about 91% retained variance. After running PCA, we trained the model over 10 epochs and received a training accuracy of 96% for the final epoch.
+Before training the model, we performed feature reduction by applying PCA to keep the 20 most relevant features for each image. By running PCA in this manner, we were able to maintain about 91% retained variance. After running PCA, we trained the model over 10 epochs and received a training accuracy of 96% for the final epoch.
 
 ![Epoch Training Data](Training_Accuracy.png)
 
@@ -43,6 +46,13 @@ We also analyzed the predictive performance of each feature by calculating the p
 
 
 Our metrics indicate a high predictive performance for Japan, South Africa, and Portugal while indicating a low predictive performance for Australia, United States, and Russia. These results are expected, as Japan, South Africa, and Portugal are smaller countries which led to more similar images being collected. On the other hand, Australia, United States, and Russia are larger countries leading to less similar images being collected.
+
+## Modified Model
+We applied PCA to keep the 20 most relevant components, and trained the modified model over ten epochs. After training the model, we tested with 500 images and recieved a testing accuracy of 32%. The precision, recall, and F1-scores are shown below:
+<img width="544" alt="Screenshot 2022-12-07 030744" src="https://github.gatech.edu/storage/user/63747/files/bfe3c441-2703-4b7e-be27-f935b4d57916">
+<img width="435" alt="F1 Scores by Country" src="https://github.gatech.edu/storage/user/63747/files/8f570874-2fb9-46a6-9cf5-3ad1ec3469f8">
+
+
 # References
  1. Brokaw, Alex. “Google's Latest AI Doesn't Need Geotags to Figure out a Photo's Location.” The Verge, The Verge, 25 Feb. 2016, https://www.theverge.com/2016/2/25/11112594/google-new-deep-learning-image-location-planet. 
 2. Nguyen, Q. C., Huang, Y., Kumar, A., Duan, H., Keralis, J. M., Dwivedi, P., Meng, H.-W., Brunisholz, K. D., Jay, J., Javanmardi, M., &amp; Tasdizen, T. (2020, September 1). Using 164 million google street view images to derive built environment predictors of COVID-19 cases. MDPI. Retrieved October 7, 2022, from https://www.mdpi.com/1660-4601/17/17/6359    
