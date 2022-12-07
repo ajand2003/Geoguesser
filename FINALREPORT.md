@@ -68,10 +68,12 @@ We can examine this result using the above shown confusion matrix. We conclude t
 ## Modified Model with Dropout Layer
 We used the modified model and tried to improve performance by adding a dropout layer, which randomly sets some input units to zero with the purpose of preventing overfitting. We tested with 500 images and recieved a testing accuracy of 34.8%, which is our highest accuracy out of all of our models. The precision, recall, F1-scores, and confusion matrix are shown below, where the columns of the confusion matrix are the predicted values, and the rows are the actual values.
 <br><img width="523" alt="Screenshot 2022-12-07 034946" src="https://github.gatech.edu/storage/user/63747/files/c4c90890-ae3b-4cb2-80c3-6b6799aa5ab7">
+<img width="429" alt="Screenshot 2022-12-07 035347" src="https://github.gatech.edu/storage/user/63747/files/cc548c54-50b9-4a4a-9864-fac8eb573de0">
 <br>
 
 # References
  1. Brokaw, Alex. “Google's Latest AI Doesn't Need Geotags to Figure out a Photo's Location.” The Verge, The Verge, 25 Feb. 2016, https://www.theverge.com/2016/2/25/11112594/google-new-deep-learning-image-location-planet. 
+
 2. Nguyen, Q. C., Huang, Y., Kumar, A., Duan, H., Keralis, J. M., Dwivedi, P., Meng, H.-W., Brunisholz, K. D., Jay, J., Javanmardi, M., &amp; Tasdizen, T. (2020, September 1). Using 164 million google street view images to derive built environment predictors of COVID-19 cases. MDPI. Retrieved October 7, 2022, from https://www.mdpi.com/1660-4601/17/17/6359    
 3. Popa, Bogdan. “Music Video Created with Google Maps Street View Images Is Surprisingly Cool.” Autoevolution, 16 May 2020, https://www.autoevolution.com/news/music-video-created-with-google-maps-street-view-images-is-surprisingly-cool-143752.html#agal_0. 
 4. Theethira, Nirvan S. “GEOGUESSR AI: IMAGE BASED GEO-LOCATION.” GEOGUESSR AI, Mar. 2020, https://nirvan66.github.io/geoguessr.html. 
