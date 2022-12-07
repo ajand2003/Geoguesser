@@ -51,9 +51,9 @@ We changed our learning rate fro 0.001 to 0.005; this allowed for our model to t
 We modified the optimizer. Adam is a commonly used optimizer algorithm for deep learning models due to its speed of convergence and reliability in reaching a global minimum; however, if the parameters are not properly fine-tuned, Adam is sometimes less effective than traditional gradient descent algorithms, specifically Stochastic Gradient Descent (SGD) when it comes to accuracy. Ultimately, we achieved an accuracy of 28.2%, the same as our initial model.
 
 ## Modified Model
-We applied PCA to keep the 20 most relevant components, and trained the modified model over ten epochs. After training the model, we tested with 500 images and recieved a testing accuracy of 32%. The precision, recall, and F1-scores are shown below:
+We applied PCA to keep the 20 most relevant components, and trained the modified model over ten epochs. After training the model, we tested with 500 images and recieved a testing accuracy of 32%. The precision, recall, and F1-scores are shown below:<br>
 <img width="544" alt="Screenshot 2022-12-07 030744" src="https://github.gatech.edu/storage/user/63747/files/bfe3c441-2703-4b7e-be27-f935b4d57916">
-<img width="435" alt="F1 Scores by Country" src="https://github.gatech.edu/storage/user/63747/files/8f570874-2fb9-46a6-9cf5-3ad1ec3469f8">
+<img width="435" alt="F1 Scores by Country" src="https://github.gatech.edu/storage/user/63747/files/8f570874-2fb9-46a6-9cf5-3ad1ec3469f8"><br>
 Note that there is a slightly better performance for overall accuracy/most countries' F1-score, with the exceptions of Great Britain and Australia, which the new model performed worse on.
 <br><img width="373" alt="Confusion" src="https://github.gatech.edu/storage/user/63747/files/5a60bdaa-05cc-48f3-927d-fe8cfd699166">
 <br>
