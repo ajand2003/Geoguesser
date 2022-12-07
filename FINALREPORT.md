@@ -20,25 +20,43 @@ We utilized the Google StreetView API to generate 20,000 street images from a se
 # Algorithms and Methods
 We utilized a convolutional neural network (CNN) as the main model for our project. Because we are using a deep learning architecture, we focused on making modifications to the hyperparameters as well as the number and type of layers in order to see how these modifications affected our results.
 
-For dimensionality reduction, we used the PCA algorithm from the scikit-learn module, and reduced the number of features present to 20 (this is a hyperparameter that we can modify for our final report) for every image, after which we used a pandas dataframe to store all of the image vectors and the actual values.  We then input the modified image data into a CNN implemented through PyTorch libraries and packages. Our forward pass algorithm sends the data through three 2-D convolutional layers and three linear layers. Within these layers, we use the rectified linear unit function (ReLU); the advantage of this is that it allows for zero values and is a linear function, allowing for a faster, more sparse representation of data than would be used in a sigmoid function. After using ReLU on the convolution layers, we use max pooling, which down-samples images by applying a max filter to every 2 x 2 nonoverlapping submatrix. After the forward pass, we developed a backpropagation algorithm that utilized a cross entropy loss function, and used gradient descent to update the parameters/inputs. We can modify the number of epochs that we run this algorithm as another hyperparameter of our model. 
+## Initial Model
+For dimensionality reduction, we used the PCA algorithm from the scikit-learn module, and reduced the number of features present to 20 for every image, after which we used a pandas dataframe to store all of the image vectors and the actual values.  We then input the modified image data into a CNN implemented through PyTorch libraries and packages. Our forward pass algorithm sends the data through three 2-D convolutional layers and three linear layers. Within these layers, we use the rectified linear unit function (ReLU); the advantage of this is that it allows for zero values and is a linear function, allowing for a faster, more sparse representation of data than would be used in a sigmoid function. After using ReLU on the convolution layers, we use max pooling, which down-samples images by applying a max filter to every 2 x 2 nonoverlapping submatrix. After the forward pass, we developed a backpropagation algorithm that utilized a cross entropy loss function, and used gradient descent to update the parameters/inputs.
 
 ![general CNN architecture](https://i0.wp.com/developersbreach.com/wp-content/uploads/2020/08/cnn_banner.png?fit=1200%2C564&ssl=1)
 *Similar CNN Architecture*   [source](https://developersbreach.com/convolution-neural-network-deep-learning/)
 
+## Modified Model
+We modified our neural network to examine how adding an additional layer would affect the performance of our neural network. We first modified the number of in and out connections of our neural network, and then added a convolutional, batch normalization, and ReLU layer. We wanted to examine if the addition of this layer would improve classification or cause overfitting.
+
 # Results and Discussion
-Before training the model, we performed feature reduction by applying PCA to keep the 20 most prevalent features for each image. After running PCA, we trained the model over 10 epochs and received a training accuracy of 96% for the final epoch.
+## Initial Model
+Before training the model, we performed feature reduction by applying PCA to keep the 20 most relevant features for each image. By running PCA in this manner, we were able to maintain about 91% retained variance. After running PCA, we trained the model over 10 epochs and received a training accuracy of 96% for the final epoch.
 
 ![Epoch Training Data](Training_Accuracy.png)
 
-Once the model was trained, we tested the model with a total of 500 images and received a testing accuracy of 28%.
+Once the model was trained, we tested the model with a total of 500 images and received a testing accuracy of 28.2%.
 
 ![Country Labels](Labels.png)
 ![ML Metrics](Analysis.png)
 
-We also analyzed the predictive performance of each feature by calculating the percision, recall, and F1 for each label and received the following metrics:
+We also analyzed the predictive performance of each feature by calculating the precision, recall, and F1-score for each country, which is shown in the first three float arrays shown above. The F1-score can be better visualized using the bar graph below:
+
+<img width="437" alt="Initial Scores" src="https://github.gatech.edu/storage/user/63747/files/7a5312de-c3a5-4a42-a112-24c16e40b8d7">
 
 
-Our metrics indicate a high predictive performance for Japan, South Africa, and Portugal while a low predictive performance for Australia, United States, and Russia. These results are expected, as Japan, South Africa, and Portugal are smaller countries which led to more similar images being collected. On the other hand, Australia, United States, and Russia are larger countries leading to less similar images being collected. The difference between the similarity of the images collected affect the model's accuracy for predicting each individual label. Our model also indicates overfitting, which we will attempt to improve on by tuning our hyperparameters for the CNN.
+Our metrics indicate a high predictive performance for Japan, South Africa, and Portugal while indicating a low predictive performance for Australia, United States, and Russia. These results are expected, as Japan, South Africa, and Portugal are smaller countries which led to more similar images being collected. On the other hand, Australia, United States, and Russia are larger countries leading to less similar images being collected.
+
+## Modified Model
+We applied PCA to keep the 20 most relevant components, and trained the modified model over ten epochs. After training the model, we tested with 500 images and recieved a testing accuracy of 32%. The precision, recall, and F1-scores are shown below:
+<img width="544" alt="Screenshot 2022-12-07 030744" src="https://github.gatech.edu/storage/user/63747/files/bfe3c441-2703-4b7e-be27-f935b4d57916">
+<img width="435" alt="F1 Scores by Country" src="https://github.gatech.edu/storage/user/63747/files/8f570874-2fb9-46a6-9cf5-3ad1ec3469f8">
+Note that there is a slightly better performance for overall accuracy/most countries' F1-score, with the exceptions of Great Britain and Australia, which the new model performed worse on.
+<br><img width="373" alt="Confusion" src="https://github.gatech.edu/storage/user/63747/files/5a60bdaa-05cc-48f3-927d-fe8cfd699166">
+<br>
+We can examine this result using the above shown confusion matrix.
+
+
 # References
  1. Brokaw, Alex. “Google's Latest AI Doesn't Need Geotags to Figure out a Photo's Location.” The Verge, The Verge, 25 Feb. 2016, https://www.theverge.com/2016/2/25/11112594/google-new-deep-learning-image-location-planet. 
 2. Nguyen, Q. C., Huang, Y., Kumar, A., Duan, H., Keralis, J. M., Dwivedi, P., Meng, H.-W., Brunisholz, K. D., Jay, J., Javanmardi, M., &amp; Tasdizen, T. (2020, September 1). Using 164 million google street view images to derive built environment predictors of COVID-19 cases. MDPI. Retrieved October 7, 2022, from https://www.mdpi.com/1660-4601/17/17/6359    
