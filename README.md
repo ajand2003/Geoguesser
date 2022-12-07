@@ -41,5 +41,5 @@ We also analyzed the predictive performance of each feature by calculating the p
 Our metrics indicate a high predictive performance for Japan, South Africa, and Portugal while a low predictive performance for Australia, United States, and Russia. These results are expected, as Japan, South Africa, and Portugal are smaller countries which led to more similar images being collected. On the other hand, Australia, United States, and Russia are larger countries leading to less similar images being collected. The difference between the similarity of the images collected affect the model's accuracy for predicting each individual label. Our model also indicates overfitting, which we will attempt to improve on by tuning our hyperparameters for the CNN.
 
 # Gantt Chart (Including Contribution Table)
-[GanttChart.4.xlsx](GanttChartFinal.xlsx)
+[GanttChartFinal.xlsx](GanttChartFinal.xlsx)
 
