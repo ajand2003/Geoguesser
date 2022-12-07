@@ -37,7 +37,7 @@ Once the model was trained, we tested the model with a total of 500 images and r
 ![Country Labels](Labels.png)
 ![ML Metrics](Analysis.png)
 
-We also analyzed the predictive performance of each feature by calculating the percision, recall, and F1 for each label and received the following metrics:
+We also analyzed the predictive performance of each feature by calculating the precision, recall, and F1-score for each country, which is shown in the first three arrays shown above. The F1-score can be better visualized using the bar graph below:
 
 
 Our metrics indicate a high predictive performance for Japan, South Africa, and Portugal while a low predictive performance for Australia, United States, and Russia. These results are expected, as Japan, South Africa, and Portugal are smaller countries which led to more similar images being collected. On the other hand, Australia, United States, and Russia are larger countries leading to less similar images being collected. The difference between the similarity of the images collected affect the model's accuracy for predicting each individual label. Our model also indicates overfitting, which we will attempt to improve on by tuning our hyperparameters for the CNN.
