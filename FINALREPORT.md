@@ -47,6 +47,15 @@ We also analyzed the predictive performance of each feature by calculating the p
 
 Our metrics indicate a high predictive performance for Japan, South Africa, and Portugal while indicating a low predictive performance for Australia, United States, and Russia. These results are expected, as Japan, South Africa, and Portugal are smaller countries which led to more similar images being collected. On the other hand, Australia, United States, and Russia are larger countries leading to less similar images being collected.
 
+## Modification of Hyperparameters
+We modified various hyperparameters and made several slight changes in our initial model.
+1. Leaky ReLU instead of ReLU
+We modified our initial model by applying the leaky ReLU activation function instead of regular ReLU. The primary reason to apply leaky ReLU is to fix what is known as "dying ReLU", which means that a ReLU function outputs mostly zero values, essentially killing the neuron. Leaky ReLU, however, allows for some negative values to "leak" instead of mapping all negative values to zero. We achieved a slightly higher accuracy of 28.4%, although this could be due to the randomness of test selection.
+2. Increasing Learning Rate
+We changed our learning rate fro 0.001 to 0.005; this allowed for our model to train faster, but the end result was not as optimal, as we recieved an accuracy of 25.4%.
+3. Stochastic Gradient Descent Instead of Adam
+We modified the optimizer. Adam is a commonly used optimizer algorithm for deep learning models due to its speed of convergence and reliability in reaching a global minimum; however, if the parameters are not properly fine-tuned, Adam is sometimes less effective than traditional gradient descent algorithms, specifically Stochastic Gradient Descent (SGD) when it comes to accuracy. Ultimately, we achieved an accuracy of 28.2%, the same as our initial model.
+
 ## Modified Model
 We applied PCA to keep the 20 most relevant components, and trained the modified model over ten epochs. After training the model, we tested with 500 images and recieved a testing accuracy of 32%. The precision, recall, and F1-scores are shown below:
 <img width="544" alt="Screenshot 2022-12-07 030744" src="https://github.gatech.edu/storage/user/63747/files/bfe3c441-2703-4b7e-be27-f935b4d57916">
@@ -54,8 +63,12 @@ We applied PCA to keep the 20 most relevant components, and trained the modified
 Note that there is a slightly better performance for overall accuracy/most countries' F1-score, with the exceptions of Great Britain and Australia, which the new model performed worse on.
 <br><img width="373" alt="Confusion" src="https://github.gatech.edu/storage/user/63747/files/5a60bdaa-05cc-48f3-927d-fe8cfd699166">
 <br>
-We can examine this result using the above shown confusion matrix.
+We can examine this result using the above shown confusion matrix. We conclude that smaller countries, such as Japan and Portugal, as well as countries with more unique geographical features in the group, such as Kenya, have less false negatives than larger countries such as Australia and the United States. Australia and the United States performed especially poorly; this could be due to the fact that the vast majority of our StreetView images were from rural areas, and the diversity in the geographies of the United States and Australia reduced the model's accuracy for thost two countries. It seems that we would need a significantly larger dataset to improve accuracy for these countries; we were not able to do so for this particular project due to the limitations posed by the amount of StreetView API images we can access per month.
 
+## Modified Model with Dropout Layer
+We used the modified model and tried to improve performance by adding a dropout layer, which randomly sets some input units to zero with the purpose of preventing overfitting. We tested with 500 images and recieved a testing accuracy of 34.8%, which is our highest accuracy out of all of our models. The precision, recall, F1-scores, and confusion matrix are shown below, where the columns of the confusion matrix are the predicted values, and the rows are the actual values.
+<br><img width="523" alt="Screenshot 2022-12-07 034946" src="https://github.gatech.edu/storage/user/63747/files/c4c90890-ae3b-4cb2-80c3-6b6799aa5ab7">
+<br>
 
 # References
  1. Brokaw, Alex. “Google's Latest AI Doesn't Need Geotags to Figure out a Photo's Location.” The Verge, The Verge, 25 Feb. 2016, https://www.theverge.com/2016/2/25/11112594/google-new-deep-learning-image-location-planet. 
