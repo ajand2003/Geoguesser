@@ -43,11 +43,11 @@ Our metrics indicate a high predictive performance for Japan, South Africa, and 
 
 ## Modification of Hyperparameters
 We modified various hyperparameters and made several slight changes in our initial model.
-1. Leaky ReLU instead of ReLU
+1. Leaky ReLU instead of ReLU<br>
 We modified our initial model by applying the leaky ReLU activation function instead of regular ReLU. The primary reason to apply leaky ReLU is to fix what is known as "dying ReLU", which means that a ReLU function outputs mostly zero values, essentially killing the neuron. Leaky ReLU, however, allows for some negative values to "leak" instead of mapping all negative values to zero. We achieved a slightly higher accuracy of 28.4%, although this could be due to the randomness of test selection.
-2. Increasing Learning Rate
+2. Increasing Learning Rate<br>
 We changed our learning rate fro 0.001 to 0.005; this allowed for our model to train faster, but the end result was not as optimal, as we recieved an accuracy of 25.4%.
-3. Stochastic Gradient Descent Instead of Adam
+3. Stochastic Gradient Descent Instead of Adam<br>
 We modified the optimizer. Adam is a commonly used optimizer algorithm for deep learning models due to its speed of convergence and reliability in reaching a global minimum; however, if the parameters are not properly fine-tuned, Adam is sometimes less effective than traditional gradient descent algorithms, specifically Stochastic Gradient Descent (SGD) when it comes to accuracy. Ultimately, we achieved an accuracy of 28.2%, the same as our initial model.
 
 ## Modified Model
