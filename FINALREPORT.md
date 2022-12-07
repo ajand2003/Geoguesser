@@ -37,7 +37,7 @@ Once the model was trained, we tested the model with a total of 500 images and r
 ![Country Labels](Labels.png)
 ![ML Metrics](Analysis.png)
 
-We also analyzed the predictive performance of each feature by calculating the precision, recall, and F1-score for each country, which is shown in the first three arrays shown above. The F1-score can be better visualized using the bar graph below:
+We also analyzed the predictive performance of each feature by calculating the precision, recall, and F1-score for each country, which is shown in the first three float arrays shown above. The F1-score can be better visualized using the bar graph below:
 
 <img width="437" alt="Initial Scores" src="https://github.gatech.edu/storage/user/63747/files/7a5312de-c3a5-4a42-a112-24c16e40b8d7">
 
